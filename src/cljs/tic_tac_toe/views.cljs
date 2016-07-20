@@ -28,7 +28,9 @@
         turn (re-frame/subscribe [:turn])
         winner (re-frame/subscribe [:winner])]
     (fn []
-      [:div
+      [:div {:style
+             {:margin "0 auto"
+              :width "300px"}}
        (if @winner
          [:div
           (name @winner) " is the winner."]
